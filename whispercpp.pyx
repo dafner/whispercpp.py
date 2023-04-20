@@ -92,6 +92,7 @@ cdef class Whisper:
         self.ctx = whisper_init_from_file(model_b)
         cdef char* LANGUAGE = language
         self.params = default_params()
+        print(self.params)
         whisper_print_system_info()
 
     def __dealloc__(self):
